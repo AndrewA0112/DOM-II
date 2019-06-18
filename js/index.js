@@ -31,17 +31,27 @@ document.addEventListener('keydown', (event) => {
 headerMain.addEventListener('mouseover', (event) =>
 {
     event.target.style.backgroundColor = 'green';
-    event.stopPropagation();
 })
 
     // Mouse Leave Listener
 headerMain.addEventListener('mouseleave', (event) =>
 {
     event.target.style.backgroundColor = 'white';
+})
+
+// Mouse Over Listener
+headerTitle.addEventListener('mouseover', (event) => {
+    headerTitle.style.backgroundColor = 'blue'
     event.stopPropagation();
 })
 
-    // Mouse Over Listner
+    // Mouse Leave Listener
+headerTitle.addEventListener('mouseleave', (event) => {
+    headerTitle.style.backgroundColor = 'white'
+    event.stopPropagation();
+})
+
+    // Mouse Over Listener
 headerNav.addEventListener('mouseover', (event) => {
     event.stopPropagation();
 })
