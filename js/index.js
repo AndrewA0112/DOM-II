@@ -1,11 +1,25 @@
 // Your code goes here
 
 
-let headerImg = document.querySelector('.intro img');
-headerImg.addEventListener('mouseover', headerImgMouseOver);
-headerImg.addEventListener('mouseleave', headerImgMouseLeave);
+// Header
 
+let headerImg = document.querySelector('.intro img');
 let headerTitle = document.querySelector('.logo-heading');
+let headerMain = document.querySelector('.main-navigation');
+let headerNav = document.querySelector('.nav-container');
+
+    // Mouse Over Listener
+headerImg.addEventListener('mouseover', (event) => {
+    event.target.style.width = '80%';
+    event.target.style.margin = '0 auto';
+});
+
+    // Mouse Leave Listener
+headerImg.addEventListener('mouseleave', (event) => {
+    event.target.style.width = '100%';
+});
+
+    // Key Down Listener
 document.addEventListener('keydown', (event) => {
     if(headerTitle.textContent.length > 15)
         event.preventDefault();
@@ -13,62 +27,59 @@ document.addEventListener('keydown', (event) => {
         headerTitle.textContent = headerTitle.textContent + event.key;
     }
 })
-
-function headerImgMouseOver (e) {
-    e.target.style.width = '50%';
-    e.target.style.margin = '0 auto';
-}
-
-function headerImgMouseLeave (e) {
-    e.target.style.width = '100%';
-}
-
-let headerMain = document.querySelector('.main-navigation');
+    // Mouse Over Listener
 headerMain.addEventListener('mouseover', (event) =>
 {
     event.target.style.backgroundColor = 'green';
     event.stopPropagation();
 })
+
+    // Mouse Leave Listener
 headerMain.addEventListener('mouseleave', (event) =>
 {
     event.target.style.backgroundColor = 'white';
     event.stopPropagation();
 })
 
-let headerNav = document.querySelector('.nav-container');
+    // Mouse Over Listner
 headerNav.addEventListener('mouseover', (event) => {
     event.stopPropagation();
 })
 
+// Main Content
+
 let mainContent = document.querySelector('body');
+let contentImg = document.querySelector('.content-section img')
+let buttons = document.querySelector('.btn')
+
+    // Double Click Listener
 mainContent.addEventListener('dblclick', () => {
     alert('Hello!');
 })
 
+    // Copy Listener
 mainContent.addEventListener('copy', (event) => {
     alert('Dont steal my text!');
     event.preventDefault();
 })
 
+    // Wheel Listener
 mainContent.addEventListener('wheel', (event) => {
     alert('WEEEEE');
 })
 
-document.addEventListener('mouseup', (event) => {
-    event.target.style.backgroundColor = 'red';
-})
-
-let buttons = document.querySelector('.btn')
+    // Click Listner
 buttons.addEventListener('click', (event) => {
-    alert('You are sign up!')
+    alert('You are signed up!')
 })
 
-
-let contentImg = document.querySelector('.content-section img')
+    // Drag Listener
 contentImg.addEventListener('drag', (event) =>
 {
     event.target.style.display = 'none';
 })
+
+    // Drag End Listener
 contentImg.addEventListener('dragend', (event) =>
 {
     event.target.style.display = 'initial';
@@ -76,10 +87,15 @@ contentImg.addEventListener('dragend', (event) =>
 
 
 
-
+// Footer
 let footerText = document.querySelector('.footer p');
-footerText.addEventListener('mouseover', footerTextMouseOver)
 
-function footerTextMouseOver (e) {
-    e.target.textContent = 'Don\'t steal our stuff :(';
-}
+    // Mouse Over Listener
+footerText.addEventListener('mouseover', (event) => {
+    event.target.textContent = 'Don\'t steal our stuff :(';
+})
+
+    // Mouse Up Listener
+footerText.addEventListener('mouseup', (event) => {
+    event.target.style.backgroundColor = 'red';
+})

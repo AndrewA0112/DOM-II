@@ -6,6 +6,7 @@ body {
 .blocks {
   margin-top: 5%;
   display: flex;
+  width: 100%;
   flex-direction: column;
 }
 
@@ -15,22 +16,22 @@ body {
   margin: 10px;
 }
 
-.block--red {
+.block-red {
   background-color: red;
 }
 
-.block--blue {
+.block-blue {
   background-color: blue;
 }
 
-.block--green {
+.block-green {
   background-color: green;
 }
 
-.block--pink {
+.block-pink {
   background-color: pink;
 }
 
-.block--gray {
+.block-gray {
   background-color: gray;
 }
