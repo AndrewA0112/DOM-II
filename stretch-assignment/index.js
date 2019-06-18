@@ -48,7 +48,7 @@ blockRed.addEventListener('mousedown', (event) => {
             event.target.style.position = 'relative'
             event.target.style.left = blockRedLeft + 'px'
         }
-    }, 50);
+    }, 100);
 })
 
 blockBlue.addEventListener('mousedown', (event) => {
@@ -114,6 +114,10 @@ blockGray.addEventListener('mousedown', (event) => {
         }
 
     }, 100);
+})
+
+document.addEventListener('mouseup', () => {
+    clearInterval(timer);
 })
 
 
