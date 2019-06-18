@@ -5,6 +5,15 @@ let headerImg = document.querySelector('.intro img');
 headerImg.addEventListener('mouseover', headerImgMouseOver);
 headerImg.addEventListener('mouseleave', headerImgMouseLeave);
 
+let headerTitle = document.querySelector('.logo-heading');
+document.addEventListener('keydown', (event) => {
+    if(headerTitle.textContent.length > 15)
+        event.preventDefault();
+    else{
+        headerTitle.textContent = headerTitle.textContent + event.key;
+    }
+})
+
 function headerImgMouseOver (e) {
     e.target.style.width = '50%';
     e.target.style.margin = '0 auto';
@@ -36,10 +45,23 @@ mainContent.addEventListener('dblclick', () => {
     alert('Hello!');
 })
 
-mainContent.addEventListener('wheel', (event) => {
-    alert('WEEEEEE');
+mainContent.addEventListener('copy', (event) => {
+    alert('Dont steal my text!');
+    event.preventDefault();
 })
 
+mainContent.addEventListener('wheel', (event) => {
+    alert('WEEEEE');
+})
+
+document.addEventListener('mouseup', (event) => {
+    event.target.style.backgroundColor = 'red';
+})
+
+let buttons = document.querySelector('.btn')
+buttons.addEventListener('click', (event) => {
+    alert('You are sign up!')
+})
 
 
 let contentImg = document.querySelector('.content-section img')
