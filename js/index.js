@@ -47,7 +47,7 @@ headerTitle.addEventListener('mouseover', (event) => {
 
     // Mouse Leave Listener
 headerTitle.addEventListener('mouseleave', (event) => {
-    headerTitle.style.backgroundColor = 'white'
+    headerTitle.style.backgroundColor = 'transparent'
     event.stopPropagation();
 })
 
@@ -69,7 +69,7 @@ mainContent.addEventListener('dblclick', () => {
 
     // Copy Listener
 mainContent.addEventListener('copy', (event) => {
-    alert('Dont steal my text!');
+    alert('Hey! That\'s our copyright material!');
     event.preventDefault();
 })
 
